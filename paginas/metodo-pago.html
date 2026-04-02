@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Métodos de Pago — HotelPlaza</title>
+  <link rel="stylesheet" href="../css/styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    .pago-cat { margin-bottom: 3rem; }
+    .pago-cat h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem; color: var(--dark);
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--gold);
+      display: inline-block;
+    }
+    .pago-card { text-align: center; }
+    .pago-card .icon { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    .pago-card h4 { font-size: 1rem; margin-bottom: 0.3rem; }
+    .pago-card p { font-size: 0.82rem; color: var(--text-light); }
+    .seguridad {
+      background: var(--dark); color: var(--cream);
+      border-radius: var(--radius); padding: 2rem;
+      margin-top: 3rem; text-align: center;
+    }
+    .seguridad h3 { font-family: 'Playfair Display', serif; color: var(--gold); margin-bottom: 0.8rem; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="../index.html" class="nav__logo">🏨 HotelPlaza</a>
+    <ul class="nav__links">
+      <li><a href="habitaciones.html">Habitaciones</a></li>
+      <li><a href="piscina.html">Piscina</a></li>
+      <li><a href="bar.html">Bar</a></li>
+      <li><a href="parqueadero.html">Parqueadero</a></li>
+      <li><a href="metodo-pago.html" style="color:var(--gold)">Pagos</a></li>
+      <li><a href="../index.html#reservar" class="btn-nav">Reservar</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero" style="height:35vh">
+    <div class="page-hero__overlay" style="background:linear-gradient(to top,rgba(26,20,16,0.9),rgba(26,20,16,0.5))"></div>
+    <div style="position:absolute;inset:0;background:var(--dark2);"></div>
+    <h1 class="page-hero__title">Métodos de <em>Pago</em></h1>
+  </div>
+
+  <div class="page-content">
+    <p style="text-align:center;max-width:600px;margin:0 auto 3rem;color:var(--text-light);font-size:1.05rem;">
+      Aceptamos los principales métodos de pago para que tu reserva sea rápida, fácil y segura.
+    </p>
+
+    <!-- TARJETAS -->
+    <div class="pago-cat">
+      <h3>💳 Tarjetas</h3>
+      <div class="pagos-grid">
+        <div class="pago-card info-card">
+          <div class="icon">💳</div>
+          <img src="../img/pagos/logo-visa.png" alt="Visa" style="height:35px;object-fit:contain;margin-bottom:0.5rem"/>
+          <h4>Visa</h4>
+          <p>Crédito y débito</p>
+        </div>
+        <div class="pago-card info-card">
+          <div class="icon">💳</div>
+          <img src="../img/pagos/logo-mastercard.png" alt="Mastercard" style="height:35px;object-fit:contain;margin-bottom:0.5rem"/>
+          <h4>Mastercard</h4>
+          <p>Crédito y débito</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BILLETERAS DIGITALES -->
+    <div class="pago-cat">
+      <h3>📱 Billeteras Digitales</h3>
+      <div class="pagos-grid">
+        <div class="pago-card info-card">
+          <div class="icon">📲</div>
+          <img src="../img/pagos/logo-nequi.png" alt="Nequi" style="height:35px;object-fit:contain;margin-bottom:0.5rem"/>
+          <h4>Nequi</h4>
+          <p>Transferencia inmediata</p>
+        </div>
+        <div class="pago-card info-card">
+          <div class="icon">📲</div>
+          <img src="../img/pagos/logo-daviplata.png" alt="Daviplata" style="height:35px;object-fit:contain;margin-bottom:0.5rem"/>
+          <h4>Daviplata</h4>
+          <p>Transferencia inmediata</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- OTROS -->
+    <div class="pago-cat">
+      <h3>🏦 Otros Métodos</h3>
+      <div class="pagos-grid">
+        <div class="pago-card info-card">
+          <div class="icon">💵</div>
+          <h4>Efectivo</h4>
+          <p>Pago en recepción en COP o USD</p>
+        </div>
+        <div class="pago-card info-card">
+          <div class="icon">🏦</div>
+          <h4>Transferencia Bancaria</h4>
+          <p>Banco Bogotá · Bancolombia · Davivienda</p>
+        </div>
+        <div class="pago-card info-card">
+          <div class="icon">🧾</div>
+          <h4>Factura Empresarial</h4>
+          <p>Para empresas con crédito preaprobado</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEGURIDAD -->
+    <div class="seguridad">
+      <h3>🔒 Pagos 100% Seguros</h3>
+      <p>Todos los pagos están protegidos con cifrado SSL de 256 bits. No almacenamos datos de tarjetas. Cumplimos estándares PCI DSS.</p>
+    </div>
+
+    <div style="text-align:center;margin-top:3rem">
+      <a href="../index.html#reservar" class="btn-primary">Hacer una reserva</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 HotelPlaza</p>
+    <nav>
+      <a href="habitaciones.html">Habitaciones</a>
+      <a href="piscina.html">Piscina</a>
+      <a href="bar.html">Bar</a>
+      <a href="parqueadero.html">Parqueadero</a>
+      <a href="metodo-pago.html">Pagos</a>
+    </nav>
+  </footer>
+
+</body>
+</html>

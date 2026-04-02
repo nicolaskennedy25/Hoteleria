@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hotel Reservas — Inicio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">🏨 HotelPlaza</a>
+    <ul class="nav__links">
+      <li><a href="paginas/habitaciones.html">Habitaciones</a></li>
+      <li><a href="paginas/piscina.html">Piscina</a></li>
+      <li><a href="paginas/bar.html">Bar</a></li>
+      <li><a href="paginas/parqueadero.html">Parqueadero</a></li>
+      <li><a href="paginas/metodo-pago.html">Pagos</a></li>
+      <li><a href="#reservar" class="btn-nav">Reservar</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero__overlay"></div>
+    <img src="img/hotel/fachada.jpg" alt="Hotel" class="hero__bg" />
+    <div class="hero__content">
+      <p class="hero__eyebrow">Bienvenido a</p>
+      <h1 class="hero__title">Hotel<br/><em>Plaza</em></h1>
+      <p class="hero__sub">Confort, elegancia y hospitalidad en cada detalle.</p>
+      <a href="#reservar" class="btn-primary">Hacer reserva</a>
+    </div>
+  </header>
+
+  <!-- SERVICIOS -->
+  <section class="servicios">
+    <h2 class="section-title">Nuestros Servicios</h2>
+    <div class="servicios__grid">
+      <a href="paginas/habitaciones.html" class="serv-card">
+        <img src="img/habitaciones/habitacion-doble.jpg" alt="Habitaciones" />
+        <div class="serv-card__body">
+          <h3>Habitaciones</h3>
+          <p>Sencillas, dobles, suites y familiares disponibles.</p>
+        </div>
+      </a>
+      <a href="paginas/piscina.html" class="serv-card">
+        <img src="img/piscina/piscina-1.jpg" alt="Piscina" />
+        <div class="serv-card__body">
+          <h3>Piscina</h3>
+          <p>Área recreativa abierta todos los días para nuestros huéspedes.</p>
+        </div>
+      </a>
+      <a href="paginas/bar.html" class="serv-card">
+        <img src="img/bar/bar-interior.jpg" alt="Bar" />
+        <div class="serv-card__body">
+          <h3>Bar & Restaurante</h3>
+          <p>Carta variada, cocteles artesanales y ambiente inigualable.</p>
+        </div>
+      </a>
+      <a href="paginas/parqueadero.html" class="serv-card">
+        <img src="img/parqueadero/parqueadero-1.jpg" alt="Parqueadero" />
+        <div class="serv-card__body">
+          <h3>Parqueadero</h3>
+          <p>Estacionamiento seguro las 24 horas con vigilancia.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- HABITACIONES DISPONIBLES -->
+  <section class="disponibles" id="habitaciones">
+    <h2 class="section-title">Habitaciones Disponibles</h2>
+    <div id="lista-habitaciones" class="hab-grid">
+      <p class="loading">Cargando habitaciones...</p>
+    </div>
+  </section>
+
+  <!-- FORMULARIO RESERVA -->
+  <section class="reserva" id="reservar">
+    <div class="reserva__inner">
+      <h2 class="section-title white">Hacer Reserva</h2>
+      <form id="form-reserva" class="form-reserva">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nombre completo</label>
+            <input type="text" id="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="correo@ejemplo.com" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Fecha entrada</label>
+            <input type="date" id="fecha-entrada" required />
+          </div>
+          <div class="form-group">
+            <label>Fecha salida</label>
+            <input type="date" id="fecha-salida" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Tipo de habitación</label>
+            <select id="tipo-hab">
+              <option value="sencilla">Sencilla</option>
+              <option value="doble">Doble</option>
+              <option value="suite">Suite</option>
+              <option value="familiar">Familiar</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Método de pago</label>
+            <select id="metodo-pago">
+              <option value="tarjeta">Tarjeta crédito/débito</option>
+              <option value="nequi">Nequi</option>
+              <option value="daviplata">Daviplata</option>
+              <option value="efectivo">Efectivo</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group precio-preview" id="precio-box" style="display:none">
+          <p>💰 Precio estimado: <strong id="precio-total">$0</strong></p>
+        </div>
+        <button type="submit" class="btn-primary full">Confirmar Reserva</button>
+      </form>
+      <div id="confirmacion" class="confirmacion" style="display:none">
+        <h3>✅ ¡Reserva confirmada!</h3>
+        <p>Se envió la confirmación a tu correo electrónico.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MIS RESERVAS -->
+  <section class="mis-reservas">
+    <h2 class="section-title">Mis Reservas</h2>
+    <div id="lista-reservas" class="reservas-list">
+      <p class="empty">No tienes reservas activas.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 HotelPlaza · Todos los derechos reservados</p>
+    <nav>
+      <a href="paginas/habitaciones.html">Habitaciones</a>
+      <a href="paginas/piscina.html">Piscina</a>
+      <a href="paginas/bar.html">Bar</a>
+      <a href="paginas/parqueadero.html">Parqueadero</a>
+      <a href="paginas/metodo-pago.html">Pagos</a>
+    </nav>
+  </footer>
+
+  <script src="js/patterns/Singleton.js"></script>
+  <script src="js/patterns/Observer.js"></script>
+  <script src="js/patterns/Strategy.js"></script>
+  <script src="js/patterns/Factory.js"></script>
+  <script src="js/patterns/Decorator.js"></script>
+  <script src="js/patterns/Adapter.js"></script>
+  <script src="js/models/Entidad.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
